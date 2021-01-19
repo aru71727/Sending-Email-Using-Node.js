@@ -1,7 +1,6 @@
 const express = require('express')
 const router = express.Router()
 const fs = require('fs');
-const url = require('url');
 
 const nodemailer = require('nodemailer');
 const bodyParser = require('body-parser');
@@ -26,7 +25,7 @@ router.post('/', function(req,res){
   transporter.verify(function(error,success){
     if(error){
       console.log("Invalid email or password.");
-      res.render('home');
+      res.redirect('/');
       }
     else{
     console.log("Logged In");

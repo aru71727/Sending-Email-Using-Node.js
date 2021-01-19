@@ -17,7 +17,7 @@ function(req,res){
     console.log(files.filetoupload.path);
     var oldpath = files.filetoupload.path;
     console.log("-----------",oldpath)
-    newpath = '/home/appventurez/Desktop/codes/express/uploaded_files/'+files.filetoupload.name;
+    newpath = '/home/appventurez/Desktop/codes/src/src/uploaded_files/'+files.filetoupload.name;
     console.log("-----------",newpath)
     fname = files.filetoupload.name;
     fs.rename(oldpath, newpath, function (err) {

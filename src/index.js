@@ -1,6 +1,6 @@
 
-const express = require('express')
-const app = express()
+const express = require('express');
+const app = express();
 const login = require('./login.js');
 const composemail = require('./composemail');
 const send = require('./sendmail');
@@ -20,5 +20,5 @@ app.use('/validate', login);
 app.use('/upload',composemail);
 app.use('/sendmail',send);
 
-app.listen(8000);
+app.listen(8080);
 

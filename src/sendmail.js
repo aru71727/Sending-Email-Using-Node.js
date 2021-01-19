@@ -36,14 +36,11 @@ var transporter = nodemailer.createTransport({
       console.log(error);
     } else {
       console.log('Email sent: ' + info.response);
-      //res.write("Email sent!!")
-      //res.end();
-      alert('Email Sent...!!');
-      res.render('home');
-
+      //res.send("sent..!!");
     }
   });
-   res.write("sent..!!");
-   res.end();
+ 
+  res.redirect('/');
+
 });
 module.exports = router;
